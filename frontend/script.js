@@ -1,7 +1,8 @@
 async function askAI() {
     let question = document.getElementById("question").value;
 
-    try {
+    try {  //test
+        let response = await fetch('https://openai-assistant-web-sand.vercel.app/api/ask', {  
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' }, 
             body: JSON.stringify({ question })
