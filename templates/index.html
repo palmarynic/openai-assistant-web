@@ -17,7 +17,7 @@
     let question = document.getElementById("question").value;
 
         try {  //test
-            let response = await fetch('https://openai-assistant-web-sand.vercel.app/api/ask', {  
+            let response = await fetch('http://127.0.0.1:5000/ask', {  
                 method: 'POST', 
                 headers: { 'Content-Type': 'application/json' }, 
                 body: JSON.stringify({ question })
