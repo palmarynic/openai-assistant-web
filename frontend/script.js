@@ -2,7 +2,6 @@ async function askAI() {
     let question = document.getElementById("question").value;
 
     try {
-        let response = await fetch('https://your-vercel-app.vercel.app/api/ask', { 
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' }, 
             body: JSON.stringify({ question })
