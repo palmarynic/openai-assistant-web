@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import openai
 from dotenv import load_dotenv
@@ -60,6 +60,10 @@ def ask_ai():
     except Exception as e:
         print(f"伺服器錯誤: {str(e)}")
         return jsonify({"error": f"伺服器錯誤: {str(e)}"}), 500
+    
+    @app.route('/')
+    def index():
+        return send_from_directory('.', 'index.html')
 
 # **讓 Flask 綁定正確 Port**
 if __name__ == '__main__':
