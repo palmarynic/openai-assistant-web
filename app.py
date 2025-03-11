@@ -15,10 +15,10 @@ CORS(app)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 ASSISTANT_ID = os.getenv("ASSISTANT_ID")
 
-@app.route('/')
-def index():
+#@app.route('/')
+#def index():
     #return render_template('index.html')
-    return jsonify({"message": "Flask API is running. Use /ask to communicate with OpenAI Assistant."})
+    #return jsonify({"message": "Flask API is running. Use /ask to communicate with OpenAI Assistant."})
 
 @app.route('/ask', methods=['POST'])
 def ask_ai():
